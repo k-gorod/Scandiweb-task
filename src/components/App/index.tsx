@@ -1,12 +1,20 @@
-import React from 'react'
+import { Context } from 'context';
+import React, { useContext } from 'react';
+import MovieSearchBlock from '../MovieSearchBlock';
+import './index.scss';
 
-import "./index.scss"
+const  App: React.FC = () => {
+  const {globalFunctions} = useContext(Context)
+  const clickHandler = (e: any) => {
 
-const App = () => {
+    if (!e.target.classList.contains('select__opt') && !e.target.classList.contains('select__wrp')) globalFunctions.closeSelect();
+
+  }
   return (
-        <div className="App">
-          App
-        </div>
-  )
+    <div className="App" onMouseUp={clickHandler}>
+      <MovieSearchBlock />
+    </div>
+  );
 }
+
 export default App;
