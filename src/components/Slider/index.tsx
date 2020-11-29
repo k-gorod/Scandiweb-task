@@ -61,7 +61,7 @@ const Silder: React.FC<SliderProps> = ({ data }) => {
       );
     }
   };
-  const arr = data.map((e, i) => {
+  const arr = data.map((_, i) => {
     return i + 1;
   });
 

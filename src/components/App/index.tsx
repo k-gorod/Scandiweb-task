@@ -4,13 +4,7 @@ import MovieSearchBlock from "../MovieSearchBlock";
 
 const App: React.FC = () => {
   const { globalFunctions } = useContext(Context);
-  const clickHandler = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent> & { target: HTMLDivElement }
-  ) => {
-    if (
-      !e.target.classList.contains("select__opt") &&
-      !e.target.classList.contains("select__wrp")
-    )
+  const clickHandler = () => {
       globalFunctions.closeSelect();
   };
   return (
