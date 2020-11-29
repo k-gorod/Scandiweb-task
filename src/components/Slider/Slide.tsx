@@ -1,14 +1,14 @@
 import React from 'react';
 import { resData } from '../MovieSearchBlock';
 
-interface posterImgProps {
+interface slideProps {
     data: resData,
     active: number,
     thisNumb: number,
     swipe: number
 }
 
-const PosterImg: React.FC<posterImgProps> = ({ data, active, thisNumb, swipe }) => {
+const Slide: React.FC<slideProps> = ({ data, active, thisNumb, swipe }) => {
     const style =
         swipe !== 0 && active === thisNumb ?
             {
@@ -27,4 +27,4 @@ const PosterImg: React.FC<posterImgProps> = ({ data, active, thisNumb, swipe }) 
     )
 }
 
-export default PosterImg;
+export default Slide;

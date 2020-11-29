@@ -10,15 +10,15 @@ Here is my solution of Scandiweb task.
 2. 
 ```sh
 $ cd Scandiweb-task
-$ npm i
-$ yarn run dev
+$ yarn
+$ yarn dev
 ```
 > port: 3333
 
 ### Build
 
 ```sh
-$ yarn run build
+$ yarn build
 ```
 
 ### Technologies used: 
@@ -28,4 +28,10 @@ $ yarn run build
 3. Babel
 4. Webpack
 
+# ?
+> Inside return of Slide component you can insert any HTML content, and send in props any data object.
+
+---
+
 > This project doesn't contain any additional libraries. Only loaders and presets that i need to implement my working flow 
+

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { resData } from '../MovieSearchBlock';
-import PosterImg from './Poster';
+import Slide from './Slide';
 interface ActiveZoneProps {
     data: resData[],
     currentSlide: number,
@@ -13,7 +13,7 @@ const ActiveZone: React.FC<ActiveZoneProps> = ({ data, currentSlide, swipe }) =>
         <div className='slider__activeZone' ref={activeZoneRef}>
             {data.map((e, i) => {
                 return (
-                    <PosterImg data={e} active={currentSlide} thisNumb={i} key={`${i}-post`} swipe={swipe} />
+                    <Slide data={e} active={currentSlide} thisNumb={i} key={`${i}-post`} swipe={swipe} />
                 )
             })}
         </div>
