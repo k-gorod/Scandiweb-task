@@ -19,19 +19,15 @@ const Silder: React.FC<SliderProps> = ({ data }) => {
   };
   const rightArrowClick = () => {
     toDefault();
-    if (activeSlide < 9) {
-      setActiveSlide(activeSlide + 1);
-    } else {
-      setActiveSlide(0);
-    }
+    activeSlide < (data.length-1)?
+    setActiveSlide(activeSlide + 1):
+    setActiveSlide(0);
   };
   const leftArrowClick = () => {
     toDefault();
-    if (activeSlide > 0) {
-      setActiveSlide(activeSlide - 1);
-    } else {
-      setActiveSlide(9);
-    }
+    activeSlide > 0?
+    setActiveSlide(activeSlide - 1):
+    setActiveSlide((data.length-1))
   };
   const moveToSlide = (number: number) => {
     setActiveSlide(number);
@@ -64,7 +60,8 @@ const Silder: React.FC<SliderProps> = ({ data }) => {
   const arr = data.map((_, i) => {
     return i + 1;
   });
-
+  console.log(data);
+  
   return (
     <div
       className="topBlock__slider slider"
