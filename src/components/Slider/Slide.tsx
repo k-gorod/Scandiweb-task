@@ -30,8 +30,8 @@ const Slide: React.FC<slideProps> = ({ data, active, thisNumb, swipe }) => {
     <div className="movieBlock__poster poster" style={style}>
       <div
         className="poster__img"
-        style={{ background: `url(${data.Poster}) center/auto 100% no-repeat` }}
-      ></div>
+        style={{ background: data.Poster!=="N/A"?`url(${data.Poster}) center/auto 100% no-repeat`:"rgba(255,255,255,0.5)" }}
+      >{data.Poster==="N/A"?"Without image":""}</div>
       <p>{data.Title}</p>
       <p>{data.Year}</p>
     </div>
