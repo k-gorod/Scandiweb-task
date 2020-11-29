@@ -106,7 +106,7 @@ const MovieSearchBlock: React.FC = () => {
   const { globalFunctions } = useContext(Context);
   const queryOMDB = async (value: string) => {
     const res = await fetch(
-      `http://www.omdbapi.com/?apikey=408fe5d2&s=${value}`
+      `https://www.omdbapi.com/?apikey=408fe5d2&s=${value}`
     );
     const data = await res.json();
     if (data.Response === "True") await setObj(data);
