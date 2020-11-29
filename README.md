@@ -6,8 +6,8 @@ Here is my solution of Scandiweb task.
 
 # ?
 
-> Inside return of Slide component you can insert any HTML content, and send in props any data object.
-> You can press on number in top of the slider to open select component and fast slide to needed poster.
+> 1. Inside return of Slide component you can insert any HTML content, and send in props any data object.
+> 2. You can press on number in top of the slider to open select component and fast slide to needed poster.
 
 ### Start
 

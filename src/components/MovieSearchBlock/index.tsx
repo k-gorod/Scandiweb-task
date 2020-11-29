@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import { Context } from "context";
+import React, { useContext, useRef, useState } from "react";
 import Silder from "../Slider";
 import "./index.scss";
 interface resData {
@@ -102,22 +103,24 @@ const rootRes: responseType = {
 const MovieSearchBlock: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [obj, setObj] = useState(rootRes);
-  async function query(value: string) {
+  const { globalFunctions } = useContext(Context);
+  const queryOMDB = async (value: string) => {
     const res = await fetch(
       `http://www.omdbapi.com/?apikey=408fe5d2&s=${value}`
     );
     const data = await res.json();
     if (data.Response === "True") await setObj(data);
-  }
+  };
 
-  const enterValue = () => {
+  const newQueryValue = async () => {
     if (inputRef && inputRef.current) {
-      query(inputRef.current.value);
+      await queryOMDB(inputRef.current.value);
     }
+    globalFunctions.moveToSlide(0);
   };
   const keyPressHandler = (e: React.KeyboardEvent) => {
     if (e.code === "Enter") {
-      enterValue();
+      newQueryValue();
     }
   };
   return (
@@ -133,7 +136,7 @@ const MovieSearchBlock: React.FC = () => {
         className="movieBlock__btn"
         type="button"
         value="Find"
-        onClick={enterValue}
+        onClick={newQueryValue}
       />
       <Silder data={obj.Search} />
     </section>
