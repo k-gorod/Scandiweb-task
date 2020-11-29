@@ -2,7 +2,7 @@
 
 Here is my solution of Scandiweb task.
 
-[Netlify_Deploy]()
+[Netlify_Deploy](https://k-gorod-scandiweb-task.netlify.app/)
 
 ### Start
 
@@ -13,6 +13,8 @@ $ cd Scandiweb-task
 $ npm i
 $ yarn run dev
 ```
+> port: 3333
+
 ### Build
 
 ```sh

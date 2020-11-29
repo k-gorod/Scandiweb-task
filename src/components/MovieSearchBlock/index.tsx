@@ -36,6 +36,7 @@ const MovieSearchBlock: React.FC = () => {
     }
     return (
         <section className="cv__movieBlock movieBlock" onKeyPress={keyPressHandler} >
+            <h1>Find your Movie</h1>
             <input className="movieBlock__input" type="text" ref={inputRef} placeholder='Enter movie name'/>
             <input className="movieBlock__btn" type="button" value='Find' onClick={enterValue} />
             <Silder data={obj.Search}/>
