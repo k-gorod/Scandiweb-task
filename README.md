@@ -4,6 +4,11 @@ Here is my solution of Scandiweb task.
 
 [Netlify_Deploy](https://k-gorod-scandiweb-task.netlify.app/)
 
+# ?
+
+> Inside return of Slide component you can insert any HTML content, and send in props any data object.
+> You can press on number in top of the slider to open select component and fast slide to needed poster.
+
 ### Start
 
 1. Clone this repository
@@ -27,11 +32,6 @@ $ yarn build
 2. React
 3. Babel
 4. Webpack
-
-# ?
-
-> Inside return of Slide component you can insert any HTML content, and send in props any data object.
-> You can press on number in top of the slider to open select component and fast slide to needed poster.
 
 ---
 
