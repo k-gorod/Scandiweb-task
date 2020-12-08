@@ -2,14 +2,14 @@ import React, { createContext } from "react";
 
 export const Context = createContext({
   globalFunctions: {
-    moveToSlide: (number: number) => {},
+    moveToSlide: (_: number) => {},
     closeSelect: () => {},
   },
 });
 
 export const ContextProvider: React.FC = ({ children }) => {
   const globalFunctions = {
-    moveToSlide: (number: number) => {},
+    moveToSlide: (_: number) => {},
     closeSelect: () => {},
   };
   return (
